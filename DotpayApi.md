@@ -14,6 +14,10 @@ Adresy pod którymi dostępny jest interfejs to:
 Środowisko testowe:
 `https://ssl.dotpay.pl/test_seller/api/`
 
+# CHARAKTERYSTYKA I ADRES INTERFEJSU
+
+
+
 ## Questions Collection [/questions]
 
 ### List All Questions [GET]
