@@ -38,6 +38,21 @@ zostanie zwrócona odpowiedź:
        WWW-Authenticate: Basic realm="api"
        Vary: Accept
        Allow: GET, HEAD, OPTIONS
++ odpowiedź:: 
+
+       {
+        "detail": "Invalid username/password"
+       }
+
+Jeśli zaistnieje taka potrzeba, to jak w powyższym przykładzie zostanie zwrócona własność detail z tekstowym opisem błędu.
+
+>Znaczenie zwracanych kodów odpowiedzi HTTP:
+
+HTTP status code | OPIS
+------------ | -------------
+200 OK | ok
+401 Unauthorized | nie udało się uwierzytelnić
+403 Forbidden | brak uprawnień
 
 
 ## Questions Collection [/questions]
