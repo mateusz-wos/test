@@ -69,26 +69,35 @@ Przykładowo dla żądania zasobu:
 
 + zostanie zwrócona odpowiedź:
 
-{
-  "count": 1,
-  "next": null,
-  "previous": null,
-  "results": [
-    {
-      "href": "https://ssl.dotpay.pl/test_seller/api/v1/accounts/443005/",
-      "id": "443005",
-      "status": "active",
-      "name": "Hoan Kiem Megastore",
-      "mcc_code": "7273",
-      "main_url": "http://www.example.com/",
-      "config": {
-        "urlc": "http://www.example.com/confirmation/",
-        "block_external_urlc": false,
-        "pin": "eMhbAulyaQKnFORbRL2EwK0hHZ5C7rkX"
+      {
+        "count": 1,
+        "next": null,
+        "previous": null,
+        "results": [
+            {
+            "href": "https://ssl.dotpay.pl/test_seller/api/v1/accounts/443005/",
+            "id": "443005",
+            "status": "active",
+            "name": "Hoan Kiem Megastore",
+            "mcc_code": "7273",
+            "main_url": "http://www.example.com/",
+                "config": {
+                    "urlc": "http://www.example.com/confirmation/",
+                    "block_external_urlc": false,
+                    "pin": "eMhbAulyaQKnFORbRL2EwK0hHZ5C7rkX"
+                }
+            }
+        ]
       }
-    }
-  ]
-}
+
++ dla nagłówków:
+ 
+      HTTP/1.1 401 Unauthorized
+     Content-Type: application/json
+    WWW-Authenticate: Basic realm="api"
+    Vary: Accept
+    Allow: GET, HEAD, OPTIONS
+
 
 
 
