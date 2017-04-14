@@ -14,8 +14,30 @@ Adresy pod którymi dostępny jest interfejs to:
 Środowisko testowe:
 `https://ssl.dotpay.pl/test_seller/api/`
 
-# CHARAKTERYSTYKA I ADRES INTERFEJSU
+# UWIERZYTELNIANIE I AUTORYZACJA
+Uwierzytelnianie do API następuje poprzez podanie (metodą HTTP Basic authentication) loginu i hasła użytkownika analogicznych dla danych logowania do GUI panelu administracyjnego Sprzedawcy.
+Po wywołaniu danego zasobu API zostanie zwrócona odpowiedź z odpowiednim kodem odpowiedzi HTTP. 
 
+Przykładowo dla zasobu:
+`https://ssl.dotpay.pl/test_seller/api/v1/accounts/`
+
+po wykonaniu żądania z błędnym loginem / hasłem:
++ nagłówki żądania: 
+
+       GET /test_seller/api/v1/accounts/ HTTP/1.1
+       Host: ssl.dotpay.pl
+       Accept: application/json
+       Content-Type: application/json
+       Authorization: Basic VXNlcjU4NDc6QVFNQWJxZEF2Yg==
+
+zostanie zwrócona odpowiedź:
++ nagłówki odpowiedzi: 
+
+       HTTP/1.1 401 Unauthorized
+       Content-Type: application/json
+       WWW-Authenticate: Basic realm="api"
+       Vary: Accept
+       Allow: GET, HEAD, OPTIONS
 
 
 ## Questions Collection [/questions]
@@ -24,27 +46,12 @@ Adresy pod którymi dostępny jest interfejs to:
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
+       GET /test_seller/api/v1/accounts/ HTTP/1.1
+       Host: ssl.dotpay.pl
+       Accept: application/json
+       Content-Type: application/json
+       Authorization: Basic VXNlcjU4NDc6QVFNQWJxZEF2Yg==
+
 
 ### Create a New Question [POST]
 
