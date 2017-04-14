@@ -54,6 +54,43 @@ HTTP status code | OPIS
 401 Unauthorized | nie udało się uwierzytelnić
 403 Forbidden | brak uprawnień
 
+# FORMAT DANYCH WEJŚCIA / WYJŚCIA
+API ma możliwość komunikacji w formacie json (domyślnie) lub xml. Wybór formatowania odbywa się za pomocą przesłania nagłówków Accept oraz Content-Type lub dodatkowego parametru format (przekazanego metodą GET), którego wartością jest nazwa danego formatu (json lub xml).
+
+Przykładowo dla żądania zasobu:
+`https://ssl.dotpay.pl/test_seller/api/v1/accounts/`
+
++ z nagłówkami: 
+
+       GET /test_seller/api/v1/accounts/ HTTP/1.1
+       Host: ssl.dotpay.pl
+       Accept: application/json
+       Content-Type: application/json
+
++ zostanie zwrócona odpowiedź:
+
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "href": "https://ssl.dotpay.pl/test_seller/api/v1/accounts/443005/",
+      "id": "443005",
+      "status": "active",
+      "name": "Hoan Kiem Megastore",
+      "mcc_code": "7273",
+      "main_url": "http://www.example.com/",
+      "config": {
+        "urlc": "http://www.example.com/confirmation/",
+        "block_external_urlc": false,
+        "pin": "eMhbAulyaQKnFORbRL2EwK0hHZ5C7rkX"
+      }
+    }
+  ]
+}
+
+
 
 ## Questions Collection [/questions]
 
