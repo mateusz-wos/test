@@ -245,3 +245,8 @@ Własność | Typ | Znaczenie/opis
 ------------ | -------------
 page | int | numer strony
 page_size | int | Ilość elementów wyświetlana na jednej stronie (min: 1 ; maks: 100)
+
+# Zasoby (accounts)
+
+## lista sklepów (ID) użytkownika
+
