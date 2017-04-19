@@ -1,0 +1,18 @@
+title: Dotpay API Documentation
+
+language_tabs:
+  - json
+  - xml
+
+toc_footers:
+  - <a href='#'>Dotpay API documentation</a>
+  - <a href='https://github.com/tripit/slate'>Dotpay Strona Główna</a>
+  - <a href='https://github.com/tripit/slate'>Dotpay - Gotowe moduły</a>
+
+includes:
+  - main
+  - _errors
+
+search: true
+
+highlight_theme: monokai
