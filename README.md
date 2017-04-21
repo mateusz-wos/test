@@ -250,3 +250,4 @@ page_size | int | Ilość elementów wyświetlana na jednej stronie (min: 1 ; ma
 
 ## lista sklepów (ID) użytkownika
 
+http://mateusztestowo.000webhostapp.com/a/build/index.html
